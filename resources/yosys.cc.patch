@@ -1,0 +1,11 @@
+--- kernel/yosys.cc.old	2022-02-28 15:08:23.989208758 +0100
++++ kernel/yosys.cc	2022-02-28 15:08:42.180913516 +0100
+@@ -1103,7 +1103,7 @@
+ 	if (design == nullptr)
+ 		design = yosys_design;
+ 
+-	log("\n-- Running command `%s' --\n", command.c_str());
++	// log("\n-- Running command `%s' --\n", command.c_str());
+ 
+ 	Pass::call(design, command);
+ }

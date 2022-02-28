@@ -1,4 +1,4 @@
 #!/bin/bash
-[ ! -d ./edginess_shared ] && mkdir ./edginess_shared
+[ ! -d ./pyals-docker-shared ] && mkdir ./pyals-docker-shared
 xhost local:docker
-docker run --rm -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix -v $PWD/edginess_shared:/root/shared  -v $PWD/../:/root/EDGINESS-DBG -w /root --privileged -it edginess-docker /bin/zsh
+docker run --rm -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix -v $PWD/pyals-docker-shared:/root/shared -w /root --privileged -it pyals-docker /bin/zsh
