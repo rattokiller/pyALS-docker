@@ -12,4 +12,5 @@ This will create the Docker container. Then, run the Docker container..
 ./run
 ```
 
+First, however, you have to [install the Docker engine](https://docs.docker.com/engine/install/).
  
