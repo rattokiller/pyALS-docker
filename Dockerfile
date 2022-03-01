@@ -66,12 +66,10 @@ RUN ./import.sh
 RUN ln -s /root/pyALS-lut-catalog/lut_catalog.db /root/pyALS/lut_catalog.db
 RUN ln -s /root/pyALS-lut-catalog/lut_catalog.db /root/pyALS-RF/lut_catalog.db
 
-WORKDIR /root/pyALS.git
+WORKDIR /root/pyALS
+RUN pip3 install -r requirements.txt 
+WORKDIR /root/pyALS-RF
 RUN pip3 install -r requirements.txt
-
-WORKDIR /root/pyALS-RF.git
-RUN pip3 install -r requirements.txt
-
 WORKDIR /root/dtcgen
 RUN pip3 install -r requirements.txt
 
